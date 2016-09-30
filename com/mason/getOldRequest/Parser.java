@@ -61,9 +61,6 @@ public class Parser {
 		//put links together
 		for(int i = 0; i < o.size(); i++){
 			builder.append((i != 0 ? "," : "") + o.get(i).getAsJsonObject().get("focusUrl").getAsString() + "?qa_expand_key=" + o.get(i).getAsJsonObject().get("key").getAsString());
-			if(i < 7){
-				System.out.println(o.get(i).getAsJsonObject().get("focusUrl").getAsString() + "?qa_expand_key=" + o.get(i).getAsJsonObject().get("key").getAsString());
-			}
 		}
 		//write data
 		write(builder.toString());
