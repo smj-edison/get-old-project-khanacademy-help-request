@@ -90,7 +90,6 @@ class MyJFrame extends JFrame {
 		//copy link to clipboard and show it
 		getThing.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				System.out.println(links[5]);
 				out.setVisible(true);
 				int r = rand(min, max);
 				out.setText("https://khanacademy.org" + links[r]);
@@ -104,6 +103,7 @@ class MyJFrame extends JFrame {
 				max = Integer.parseInt(JOptionPane.showInputDialog(null, "Type in new Maximum  (effects how many are downloaded):", "Set Max:", JOptionPane.PLAIN_MESSAGE));
 				//save data file
 				Main.saveData(min, max);
+				startDownload();
 			}
 		});
 		//menu bar
